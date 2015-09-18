@@ -1,0 +1,9 @@
+GPS Adobe Air Native Extension
+
+
+Nov 10, 2013	>> V1.0: 	beginning of the journey!
+
+Sep 18, 2015 	>> V2.0:	automatic Gps provider picker
+				optimized for indoor location finder
+				supporting iOS + Android
+				supporting geocoding direct and reverse
