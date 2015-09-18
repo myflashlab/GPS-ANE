@@ -1,9 +1,11 @@
 # GPS ANE V2.0 for Android+iOS
+Although there is a GPS API coming with Air SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That’s why we decided to build this cool GPS extension. it’s highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it’s also optimized for battery usage so you don’t have to worry about your app’s battery usage at all. try the extension right now for free and see how fast it is. 
 
-
-
-
-
+**Main Features:**
+* start/stop GPS service periodically
+* get one time location finder for better battery usage
+* geocoding reverse to convert gps coordinates to real addresses
+* geocoding reverse to convert gps coordinates to real addresses
 
 checkout here for the commercial version: http://myappsnippet.com/gps-air-extension/
 
