@@ -1,4 +1,4 @@
-# GPS ANE V2.0 for Android+iOS
+# GPS ANE V2.9 for Android+iOS
 Although there is a GPS API coming with Air SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That’s why we decided to build this cool GPS extension. it’s highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it’s also optimized for battery usage so you don’t have to worry about your app’s battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
@@ -15,10 +15,10 @@ checkout here for the commercial version: http://myappsnippet.com/gps-air-extens
 
 # USAGE - Location:
 ```actionscript
-     import com.doitflash.air.extensions.gps.Gps;
-     import com.doitflash.air.extensions.gps.LocationAccuracy;
-     import com.doitflash.air.extensions.gps.Location;
-     import com.doitflash.air.extensions.gps.GpsEvent;
+     import com.myflashlab.air.extensions.gps.Gps;
+     import com.myflashlab.air.extensions.gps.LocationAccuracy;
+     import com.myflashlab.air.extensions.gps.Location;
+     import com.myflashlab.air.extensions.gps.GpsEvent;
      
      Gps.init(); // call init only once in your project
      
@@ -182,7 +182,7 @@ Embedding the ANE:
   <extensions>
 	<!-- And finally, you need to introduce the extensions here. you will need commonDependenciesV4.0.ane or higher -->
     <extensionID>com.doitflash.air.extensions.dependency</extensionID>
-    <extensionID>com.doitflash.air.extensions.gps</extensionID>
+    <extensionID>com.myflashlab.air.extensions.gps</extensionID>
   </extensions>
 -->
 ```

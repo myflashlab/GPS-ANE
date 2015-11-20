@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/18.0">
   <id>com.doitflash.exGps</id>
-  <versionNumber>2.0</versionNumber>
+  <versionNumber>2.9</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGps</filename>
-  <name>exGps</name>
+  <name>GPS ANE</name>
   <android>
     <manifestAdditions> <!--http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffc.html#WS2d929364fa0b81373f2c6cba12a3522f10c-8000-->
 		<![CDATA[<manifest android:installLocation="auto">
@@ -98,7 +98,7 @@
     <image512x512>icons/icon_512.png</image512x512>
   </icon>
   <extensions>
-    <extensionID>com.doitflash.air.extensions.gps</extensionID>
+    <extensionID>com.myflashlab.air.extensions.gps</extensionID>
     <extensionID>com.doitflash.air.extensions.dependency</extensionID>
   </extensions>
 </application>

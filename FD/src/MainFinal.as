@@ -1,9 +1,9 @@
 package 
 {
-	import com.doitflash.air.extensions.gps.Gps;
-	import com.doitflash.air.extensions.gps.LocationAccuracy;
-	import com.doitflash.air.extensions.gps.Location;
-	import com.doitflash.air.extensions.gps.GpsEvent;
+	import com.myflashlab.air.extensions.gps.Gps;
+	import com.myflashlab.air.extensions.gps.LocationAccuracy;
+	import com.myflashlab.air.extensions.gps.Location;
+	import com.myflashlab.air.extensions.gps.GpsEvent;
 	import flash.utils.setTimeout;
 	
 	import com.doitflash.consts.Direction;

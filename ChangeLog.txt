@@ -7,3 +7,5 @@ Sep 18, 2015 	>> V2.0:	automatic Gps provider picker
 				optimized for indoor location finder
 				supporting iOS + Android
 				supporting geocoding direct and reverse
+
+Nov 03, 2015	>> V2.9:	doitflash devs merged into MyFLashLab Team.
