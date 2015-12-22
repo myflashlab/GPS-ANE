@@ -1,11 +1,13 @@
 @echo off
 
+:: Set working dir
+cd %~dp0 & cd ..
+
 if "%PLATFORM%"=="android" goto android-config
 if "%PLATFORM%"=="ios" goto ios-config
 if "%PLATFORM%"=="ios-dist" goto ios-dist-config
 if "%PLATFORM%"=="ios-adhoc" goto ios-adhoc-config
 goto start
-
 
 :android-config
 set CERT_FILE=%AND_CERT_FILE%
@@ -22,6 +24,8 @@ set ICONS=%IOS_ICONS%
 set DIST_EXT=ipa
 set TYPE=ipa
 goto start
+:: Set working dir
+cd %~dp0 & cd ..
 
 :ios-dist-config
 set CERT_FILE=%IOS_DIST_CERT_FILE%
@@ -50,7 +54,7 @@ set OUTPUT=%DIST_PATH%\%DIST_NAME%%TARGET%.%DIST_EXT%
 echo Packaging: %OUTPUT%
 echo using certificate: %CERT_FILE%...
 echo.
-call adt -package -target %TYPE%%TARGET% %OPTIONS% %SIGNING_OPTIONS% "%OUTPUT%" "%APP_XML%" %FILE_OR_DIR% -extdir lib/ 
+call adt -package -target %TYPE%%TARGET% %OPTIONS% %SIGNING_OPTIONS% "%OUTPUT%" "%APP_XML%" %FILE_OR_DIR% -extdir lib/
 echo.
 if errorlevel 1 goto failed
 goto end
@@ -60,11 +64,11 @@ echo Certificate not found: %CERT_FILE%
 echo.
 echo Android: 
 echo - generate a default certificate using 'bat\CreateCertificate.bat'
-echo   or configure a specific certificate in 'bat\SetupApplication.bat'.
+echo   or configure a specific certificate in 'bat\SetupApp.bat'.
 echo.
 echo iOS: 
 echo - configure your developer key and project's Provisioning Profile
-echo   in 'bat\SetupApplication.bat'.
+echo   in 'bat\SetupApp.bat'.
 echo.
 if %PAUSE_ERRORS%==1 pause
 exit
@@ -73,10 +77,10 @@ exit
 echo APK setup creation FAILED.
 echo.
 echo Troubleshooting: 
-echo - did you build your project in FlashDevelop?
 echo - verify AIR SDK target version in %APP_XML%
 echo.
 if %PAUSE_ERRORS%==1 pause
 exit
 
 :end
+
