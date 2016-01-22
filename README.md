@@ -9,7 +9,7 @@ Although there is a GPS API coming with Air SDK, in a real app development scena
 
 checkout here for the commercial version: http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 
-![GPS ANE](http://myappsnippet.com/wp-content/uploads/2015/09/gps-air-extension_preview.jpg)
+![GPS ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-extension-gps-595x738.jpg)
 
 **NOTICE: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.**
 
