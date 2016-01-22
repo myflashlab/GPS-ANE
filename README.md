@@ -1,4 +1,4 @@
-# GPS ANE V2.9.1 for Android+iOS
+# GPS ANE V2.9.2 for Android+iOS
 Although there is a GPS API coming with Air SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
@@ -192,3 +192,20 @@ Embedding the ANE:
 2. iOS SDK 6.1 or higher
 3. [commonDependenciesV4.0.ane](https://github.com/myflashlab/common-dependencies-ANE) or higher
 5. on Android you have to compile on debug or captive (shared compilation will fail)
+
+# Changelog
+* Nov 10, 2013	>> V1.0: 	beginning of the journey!
+
+* Sep 18, 2015 	>> V2.0:	automatic Gps provider picker
+  *				optimized for indoor location finder
+  *				supporting iOS + Android
+  *				supporting geocoding direct and reverse
+
+* Nov 03, 2015	>> V2.9:	doitflash devs merged into MyFLashLab Team.
+
+* Dec 20, 2015 	>> V2.9.1: 	minor bug fixes
+
+* Jan 20, 2016 	>> V2.9.2: 	bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem.
+  *							This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater.
+  *							https://forums.adobe.com/thread/2055508
+  *							https://forums.adobe.com/message/8294948
