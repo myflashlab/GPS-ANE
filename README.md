@@ -7,13 +7,13 @@ Although there is a GPS API coming with Air SDK, in a real app development scena
 * geocoding reverse to convert gps coordinates to real addresses
 * geocoding reverse to convert gps coordinates to real addresses
 
-checkout here for the commercial version: http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
+# Demo .apk
+you may like to see the ANE in action? [Download demo .apk](https://github.com/myflashlab/GPS-ANE/tree/master/FD/dist)
 
-![GPS ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-extension-gps-595x738.jpg)
+**NOTICE**: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.
+[Download the ANE](https://github.com/myflashlab/GPS-ANE/tree/master/FD/lib)
 
-**NOTICE: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.**
-
-# USAGE - Location:
+# Air Usage - location
 ```actionscript
      import com.myflashlab.air.extensions.gps.Gps;
      import com.myflashlab.air.extensions.gps.LocationAccuracy;
@@ -71,7 +71,7 @@ checkout here for the commercial version: http://www.myflashlabs.com/product/gps
      }
 ```
 
-# USAGE - Geocoding
+# Air Usage - Geocoding
 ```actionscript
      Gps.geocoding.reverse(-33.7969235, 150.9224326, onResultGeocodingReverse);
      
@@ -187,25 +187,42 @@ Embedding the ANE:
 -->
 ```
 
-# Requirements 
+# Requirements
 1. Android API 10 or higher
 2. iOS SDK 6.1 or higher
 3. [commonDependenciesV4.0.ane](https://github.com/myflashlab/common-dependencies-ANE) or higher
 5. on Android you have to compile on debug or captive (shared compilation will fail)
 
+# Commercial Version
+http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
+
+![GPS ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-extension-gps-595x738.jpg)
+
+# Tutorials
+[How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
+
+# Tutorials
+[How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
+
 # Changelog
-* Nov 10, 2013	>> V1.0: 	beginning of the journey!
+*Jan 20, 2016 - V2.9.2*
+* bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem. This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater. https://forums.adobe.com/thread/2055508 https://forums.adobe.com/message/8294948
 
-* Sep 18, 2015 	>> V2.0:	automatic Gps provider picker
-  *				optimized for indoor location finder
-  *				supporting iOS + Android
-  *				supporting geocoding direct and reverse
 
-* Nov 03, 2015	>> V2.9:	doitflash devs merged into MyFLashLab Team.
+*Dec 20, 2015 - V2.9.1*
+* minor bug fixes
 
-* Dec 20, 2015 	>> V2.9.1: 	minor bug fixes
 
-* Jan 20, 2016 	>> V2.9.2: 	bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem.
-  *							This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater.
-  *							https://forums.adobe.com/thread/2055508
-  *							https://forums.adobe.com/message/8294948
+*Nov 03, 2015 - V2.9*
+* doitflash devs merged into MyFLashLab Team
+
+
+*Sep 18, 2015 - V2.0*
+* automatic Gps provider picker
+* optimized for indoor location finder
+* supporting iOS + Android
+* supporting geocoding direct and reverse
+
+
+*Nov 10, 2013 - V1.0*
+* beginning of the journey!
