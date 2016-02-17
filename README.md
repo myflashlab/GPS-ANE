@@ -190,7 +190,7 @@ Embedding the ANE:
 # Requirements
 1. Android API 10 or higher
 2. iOS SDK 6.1 or higher
-3. [commonDependenciesV4.0.ane](https://github.com/myflashlab/common-dependencies-ANE) or higher
+3. This ANE is dependent on **overrideAir.ane** and **googlePlayServices.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 5. on Android you have to compile on debug or captive (shared compilation will fail)
 
 # Commercial Version
