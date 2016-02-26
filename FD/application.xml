@@ -34,9 +34,9 @@
 			</activity>
 			
 			<!-- required for GPS -->
-			<service android:name="com.doitflash.gps.services.AndroidGeocodingProvider$AndroidGeocodingService" android:exported="false" />
-			<service android:name="com.doitflash.gps.services.ActivityGooglePlayServicesProvider$ActivityRecognitionService" android:exported="false" />
-			<service android:name="com.doitflash.gps.services.GeofencingGooglePlayServicesProvider$GeofencingService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService" android:exported="false" />
 			<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 			
 		</application>
@@ -105,7 +105,11 @@
     <!--<image512x512>icons/icon_512.png</image512x512>-->
   </icon>
   <extensions>
+    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
     <extensionID>com.myflashlab.air.extensions.gps</extensionID>
-    <extensionID>com.doitflash.air.extensions.dependency</extensionID>
   </extensions>
 </application>

@@ -57,8 +57,12 @@
     <element path="lib\commonDependenciesV3.0.ane" />
     <element path="lib\barcodeExtension.ane" />
     <element path="lib\downloadManager.ane" />
-    <element path="lib\commonDependenciesV4.0.ane" />
     <element path="lib\gps.ane" />
+    <element path="lib\overrideAir.ane" />
+    <element path="lib\androidSupport.ane" />
+    <element path="lib\googlePlayServices_base.ane" />
+    <element path="lib\googlePlayServices_basement.ane" />
+    <element path="lib\googlePlayServices_location.ane" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

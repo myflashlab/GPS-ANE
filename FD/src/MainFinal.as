@@ -157,9 +157,6 @@ package
 		
 		private function init():void
 		{
-			// required only if you are a member of the club
-			Gps.clubId = "paypal-address-you-used-to-join-the-club";
-			
 			Gps.init(); // call init only once in your project
 			// Gps.dispose();
 			

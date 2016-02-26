@@ -1,4 +1,4 @@
-# GPS ANE V2.9.2 for Android+iOS
+# GPS ANE V3.0.0 for Android+iOS
 Although there is a GPS API coming with Air SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
@@ -126,9 +126,9 @@ FOR ANDROID:
 			</activity>
 			
 			<!-- required for GPS -->
-			<service android:name="com.doitflash.gps.services.AndroidGeocodingProvider$AndroidGeocodingService" android:exported="false" />
-			<service android:name="com.doitflash.gps.services.ActivityGooglePlayServicesProvider$ActivityRecognitionService" android:exported="false" />
-			<service android:name="com.doitflash.gps.services.GeofencingGooglePlayServicesProvider$GeofencingService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService" android:exported="false" />
 			<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 			
 		</application>
@@ -143,7 +143,7 @@ FOR iOS:
 -->
 <InfoAdditions>
 		<key>MinimumOSVersion</key>
-		<string>6.1</string>
+		<string>7.1</string>
 		
 		<key>UIStatusBarStyle</key>
 		<string>UIStatusBarStyleBlackOpaque</string>
@@ -156,13 +156,13 @@ FOR iOS:
 		
 		<!--required for GPS-->
 		<key>NSLocationUsageDescription</key>
-		<string>I need location 1</string>
+		<string>I need location UsageDescription</string>
 		
 		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>I need location 2</string>
+		<string>I need location WhenInUseUsageDescription</string>
 		
 		<key>NSLocationAlwaysUsageDescription</key>
-		<string>I need location 3</string>
+		<string>I need location AlwaysUsageDescription</string>
 		
 		<key>UIDeviceFamily</key>
 		<array>
@@ -180,17 +180,20 @@ FOR iOS:
 Embedding the ANE:
 -->
   <extensions>
-	<!-- And finally, you need to introduce the extensions here. you will need commonDependenciesV4.0.ane or higher -->
-    <extensionID>com.doitflash.air.extensions.dependency</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
     <extensionID>com.myflashlab.air.extensions.gps</extensionID>
   </extensions>
 -->
 ```
 
 # Requirements
-1. Android API 10 or higher
-2. iOS SDK 6.1 or higher
-3. This ANE is dependent on **overrideAir.ane** and **googlePlayServices.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
+1. Android API 15 or higher
+2. iOS SDK 7.1 or higher
+3. This ANE is dependent on **androidSupport.ane**, **googlePlayServices_base.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_location.ane** and **overrideAir.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 5. on Android you have to compile on debug or captive (shared compilation will fail)
 
 # Commercial Version
@@ -205,6 +208,17 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Feb 26, 2016 - V3.0.0*
+* Updated GooglePlayServices to V8.4.0
+* manifest services now changed to 
+			```
+			<service android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService" android:exported="false" />
+			<service android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService" android:exported="false" />
+			```
+* Removed the global dependency to GooglePlayServices and instead, the following ANEs must be added: [**androidSupport.ane**, **googlePlayServices_base.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_location.ane** and **overrideAir.ane**](https://github.com/myflashlab/common-dependencies-ANE)
+
+
 *Jan 20, 2016 - V2.9.2*
 * bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem. This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater. https://forums.adobe.com/thread/2055508 https://forums.adobe.com/message/8294948
 
