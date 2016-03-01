@@ -204,9 +204,6 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
-# Tutorials
-[How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
-
 # Changelog
 *Feb 26, 2016 - V3.0.0*
 * Updated GooglePlayServices to V8.4.0
