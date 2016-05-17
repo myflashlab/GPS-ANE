@@ -7,6 +7,9 @@ Although there is a GPS API coming with Air SDK, in a real app development scena
 * geocoding reverse to convert gps coordinates to real addresses
 * geocoding reverse to convert gps coordinates to real addresses
 
+# asdoc
+[find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gps/package-detail.html)
+
 # Demo .apk
 you may like to see the ANE in action? [Download demo .apk](https://github.com/myflashlab/GPS-ANE/tree/master/FD/dist)
 
