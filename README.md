@@ -1,4 +1,4 @@
-# GPS ANE V3.0.0 for Android+iOS
+# GPS ANE V3.1.0 for Android+iOS
 Although there is a GPS API coming with Air SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
@@ -208,6 +208,10 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Jun 05, 2016 - V3.1.0*
+* Updated GooglePlayServices to V9.0.1. you need to update ```googlePlayServices_base.ane```, ```googlePlayServices_basement.ane``` and ```googlePlayServices_location.ane``` to V9.0.1
+
+
 *Feb 26, 2016 - V3.0.0*
 * Updated GooglePlayServices to V8.4.0
 * manifest services now changed to 

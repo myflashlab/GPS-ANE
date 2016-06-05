@@ -1,5 +1,9 @@
 GPS Adobe Air Native Extension
 
+*Jun 05, 2016 - V3.1.0*
+* Updated GooglePlayServices to V9.0.1. you need to update ```googlePlayServices_base.ane```, ```googlePlayServices_basement.ane``` and ```googlePlayServices_location.ane``` to V9.0.1
+
+
 *Feb 26, 2016 - V3.0.0*
 * Updated GooglePlayServices to V8.4.0
 * manifest services now changed to 

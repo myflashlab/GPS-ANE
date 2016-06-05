@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/20.0">
   <id>com.doitflash.exGps</id>
-  <versionNumber>2.9.2</versionNumber>
+  <versionNumber>3.1.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGps</filename>
   <name>GPS ANE</name>
