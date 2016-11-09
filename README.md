@@ -234,7 +234,6 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 # Changelog
 *Nov 09, 2016 - V3.2.0*
 * Optimized for Android manual permissions if you are targeting AIR SDK 24+
-* From now on, this ANE will depend on androidSupport.ane and overrideAir.ane on the Android side
 
 *Jun 05, 2016 - V3.1.0*
 * Updated GooglePlayServices to V9.0.1. you need to update ```googlePlayServices_base.ane```, ```googlePlayServices_basement.ane``` and ```googlePlayServices_location.ane``` to V9.0.1
