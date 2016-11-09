@@ -1,5 +1,5 @@
-# GPS ANE V3.1.0 for Android+iOS
-Although there is a GPS API coming with Air SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
+# GPS ANE V3.2.0 for Android+iOS
+Although there is a GPS API coming with AIR SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
 * start/stop GPS service periodically
@@ -16,7 +16,9 @@ you may like to see the ANE in action? [Download demo .apk](https://github.com/m
 **NOTICE**: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.
 [Download the ANE](https://github.com/myflashlab/GPS-ANE/tree/master/FD/lib)
 
-# Air Usage - location
+# AIR Usage - location
+For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GPS-ANE/blob/master/FD/src/MainFinal.as).
+
 ```actionscript
      import com.myflashlab.air.extensions.gps.Gps;
      import com.myflashlab.air.extensions.gps.LocationAccuracy;
@@ -74,7 +76,7 @@ you may like to see the ANE in action? [Download demo .apk](https://github.com/m
      }
 ```
 
-# Air Usage - Geocoding
+# AIR Usage - Geocoding
 ```actionscript
      Gps.geocoding.reverse(-33.7969235, 150.9224326, onResultGeocodingReverse);
      
@@ -97,15 +99,18 @@ you may like to see the ANE in action? [Download demo .apk](https://github.com/m
      }
 ```
 
-# Air .xml manifest
+# AIR .xml manifest
 ```xml
 <!--
 FOR ANDROID:
 -->
 <manifest android:installLocation="auto">
-		<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="22" />
+		
 		<uses-permission android:name="android.permission.WAKE_LOCK" />
 		<uses-permission android:name="android.permission.INTERNET" />
+		
+		<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
+		<uses-sdk android:targetSdkVersion="23"/>
 		
 		<!-- required for GPS -->
 		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -183,21 +188,40 @@ FOR iOS:
 Embedding the ANE:
 -->
   <extensions>
+  
+	<extensionID>com.myflashlab.air.extensions.gps</extensionID>
+	
+	<!-- Required if you are targeting AIR 24+ and have to take care of Permissions mannually -->
+	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
+	
+	<!-- The following dependency ANEs are only required when compiling for Android -->
     <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
-    <extensionID>com.myflashlab.air.extensions.gps</extensionID>
+    
   </extensions>
 -->
 ```
 
 # Requirements
-1. Android API 15 or higher
-2. iOS SDK 7.1 or higher
-3. This ANE is dependent on **androidSupport.ane**, **googlePlayServices_base.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_location.ane** and **overrideAir.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
-5. on Android you have to compile on debug or captive (shared compilation will fail)
+* Android API 15 or higher
+* iOS SDK 7.1 or higher
+* This ANE is dependent on **androidSupport.ane**, **googlePlayServices_base.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_location.ane** and **overrideAir.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
+* on Android you have to compile on debug or captive (shared compilation will fail)
+
+# Permissions
+If you are targeting AIR 24 or higher, you need to [take care of the permissions mannually](http://www.myflashlabs.com/adobe-air-app-permissions-android-ios/). Below are the list of Permissions this ANE might require. (Note: *Necessary Permissions* are those that the ANE will NOT work without them and *Optional Permissions* are those which are needed only if you are using some specific features in the ANE.)
+
+Check out the demo project available at this repository to see how we have used our [PermissionCheck ANE](http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/) to ask for the permissions.
+
+**Necessary Permissions:**  
+
+1. PermissionCheck.SOURCE_LOCATION
+
+**Optional Permissions:**  
+none
 
 # Commercial Version
 http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
@@ -208,6 +232,10 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Nov 09, 2016 - V3.2.0*
+* Optimized for Android manual permissions if you are targeting AIR SDK 24+
+* From now on, this ANE will depend on androidSupport.ane and overrideAir.ane on the Android side
+
 *Jun 05, 2016 - V3.1.0*
 * Updated GooglePlayServices to V9.0.1. you need to update ```googlePlayServices_base.ane```, ```googlePlayServices_basement.ane``` and ```googlePlayServices_location.ane``` to V9.0.1
 

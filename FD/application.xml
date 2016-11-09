@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/20.0">
+<application xmlns="http://ns.adobe.com/air/application/24.0">
   <id>com.doitflash.exGps</id>
   <versionNumber>3.1.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
@@ -8,7 +8,6 @@
   <android>
     <manifestAdditions> <!--http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffc.html#WS2d929364fa0b81373f2c6cba12a3522f10c-8000-->
 		<![CDATA[<manifest android:installLocation="auto">
-		<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="22" />
 		<uses-permission android:name="android.permission.WAKE_LOCK" />
 		<uses-permission android:name="android.permission.INTERNET" />
 		
@@ -18,6 +17,9 @@
 		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 		<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 		<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+			
+		<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
+		<uses-sdk android:targetSdkVersion="23"/>
 		
 		<application android:hardwareAccelerated="true" android:allowBackup="true">
 			
@@ -105,11 +107,18 @@
     <!--<image512x512>icons/icon_512.png</image512x512>-->
   </icon>
   <extensions>
+	
+	<extensionID>com.myflashlab.air.extensions.gps</extensionID>
+	
+	<!-- Required if you are targetting AIR 24+ and have to take care of Permissions mannually -->
+	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
+	
+	<!-- The following dependency ANEs are only required when compiling for Android -->
     <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
-    <extensionID>com.myflashlab.air.extensions.gps</extensionID>
+	
   </extensions>
 </application>
