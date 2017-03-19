@@ -1,5 +1,10 @@
 GPS Adobe Air Native Extension
 
+*Mar 20, 2017 - V3.2.1*
+* Even if you are building for iOS only, you still need to include the following ANE as the dependency overrideAir.ane V4.0.0
+* Updated Android SDK to V10.2.0 and you need to make sure you are using the [latest version of the dependency files](https://github.com/myflashlab/common-dependencies-ANE).
+* MinimumOSVersion to support the ANE is iOS 8.0
+
 *Nov 09, 2016 - V3.2.0*
 * Optimized for Android manual permissions if you are targeting AIR SDK 24+
 

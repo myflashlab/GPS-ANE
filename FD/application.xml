@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/24.0">
   <id>com.doitflash.exGps</id>
-  <versionNumber>3.1.0</versionNumber>
+  <versionNumber>3.2.1</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGps</filename>
   <name>GPS ANE</name>
@@ -51,7 +51,7 @@
     <!-- A list of plist key/value pairs to be added to the application Info.plist -->
     <InfoAdditions>
 		<![CDATA[<key>MinimumOSVersion</key>
-		<string>6.1</string>
+		<string>8.0</string>
 		
 		<key>UIStatusBarStyle</key>
 		<string>UIStatusBarStyleBlackOpaque</string>
@@ -113,7 +113,7 @@
 	<!-- Required if you are targetting AIR 24+ and have to take care of Permissions mannually -->
 	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 	
-	<!-- The following dependency ANEs are only required when compiling for Android -->
+	<!-- download the dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
     <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>

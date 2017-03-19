@@ -6,6 +6,7 @@ package
 	import com.myflashlab.air.extensions.gps.GpsEvent;
 	import com.myflashlab.air.extensions.nativePermissions.PermissionCheck;
 	import flash.utils.setTimeout;
+	import com.myflashlab.air.extensions.dependency.OverrideAir;
 	
 	import com.doitflash.consts.Direction;
 	import com.doitflash.consts.Orientation;
@@ -184,8 +185,20 @@ package
 			}
 		}
 		
+		private function myDebuggerDelegate($ane:String, $class:String, $msg:String):void
+		{
+			trace("------------------");
+			trace("$ane = " + $ane);
+			trace("$class = " + $class);
+			trace("$msg = " + $msg);
+			trace("------------------");
+		}
+		
 		private function init():void
 		{
+			// remove this line in production build or pass null as the delegate
+			OverrideAir.enableDebugger(myDebuggerDelegate);
+			
 			Gps.init(); // call init only once in your project
 			// Gps.dispose();
 			
