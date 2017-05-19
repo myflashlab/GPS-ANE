@@ -160,7 +160,7 @@ package
 		
 		private function checkPermissions():void
 		{
-			// first you need to make sure you have access to the Strorage if you are on Android?
+			// first you need to make sure you have access to the Location API if you are on Android?
 			var permissionState:int = _exPermissions.check(PermissionCheck.SOURCE_LOCATION);
 			
 			if (permissionState == PermissionCheck.PERMISSION_UNKNOWN || permissionState == PermissionCheck.PERMISSION_DENIED)
@@ -201,6 +201,17 @@ package
 			
 			Gps.init(); // call init only once in your project
 			// Gps.dispose();
+			
+			var btn0:MySprite = createBtn("request Always Access on iOS");
+			btn0.addEventListener(MouseEvent.CLICK, requestAlwaysAccess);
+			_list.add(btn0);
+			
+			function requestAlwaysAccess(e:MouseEvent):void
+			{
+				Gps.requestAlwaysAuthorization();
+			}
+			
+			// -------------------------
 			
 			var btn1:MySprite = createBtn("getLastLocation");
 			btn1.addEventListener(MouseEvent.CLICK, getLastLocation);
@@ -329,9 +340,6 @@ package
 				C.log("locationServicesEnabled = " + Gps.state.locationServicesEnabled);
 			}
 			
-			// -------------------------
-			// -------------------------
-			// -------------------------
 			// -------------------------
 			
 			onResize();

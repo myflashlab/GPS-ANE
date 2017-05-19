@@ -1,4 +1,4 @@
-# GPS ANE V3.2.1 for Android+iOS
+# GPS ANE V3.3.0 for Android+iOS
 Although there is a GPS API coming with AIR SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
@@ -208,6 +208,7 @@ Embedding the ANE:
 # Requirements
 * Android API 15 or higher
 * iOS SDK 8.0 or higher
+* AIR SDK 25 or higher
 * This ANE is dependent on **androidSupport.ane**, **googlePlayServices_base.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_location.ane** and **overrideAir.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 * on Android you have to compile on debug or captive (shared compilation will fail)
 
@@ -232,6 +233,11 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*May 19, 2017 - V3.3.0*
+* Added the following command: ```Gps.requestAlwaysAuthorization();```. Fix for [this issue](https://github.com/myflashlab/GPS-ANE/issues/23)
+* Updated the Android libraries which resulted in huge decrease in the ANE file size.
+* You will need AIR SDK 25 or higher to compile the ANE.
+
 *Mar 20, 2017 - V3.2.1*
 * Even if you are building for iOS only, you still need to include the following ANE as the dependency overrideAir.ane V4.0.0
 * Updated Android SDK to V10.2.0 and you need to make sure you are using the [latest version of the dependency files](https://github.com/myflashlab/common-dependencies-ANE).

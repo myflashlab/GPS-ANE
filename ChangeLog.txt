@@ -1,5 +1,10 @@
 GPS Adobe Air Native Extension
 
+*May 19, 2017 - V3.3.0*
+* Added the following command: ```Gps.requestAlwaysAuthorization();```. Fix for [this issue](https://github.com/myflashlab/GPS-ANE/issues/23)
+* Updated the Android libraries which resulted in huge decrease in the ANE file size.
+* You will need AIR SDK 25 or higher to compile the ANE.
+
 *Mar 20, 2017 - V3.2.1*
 * Even if you are building for iOS only, you still need to include the following ANE as the dependency overrideAir.ane V4.0.0
 * Updated Android SDK to V10.2.0 and you need to make sure you are using the [latest version of the dependency files](https://github.com/myflashlab/common-dependencies-ANE).
