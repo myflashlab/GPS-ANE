@@ -1,4 +1,4 @@
-# GPS ANE V3.3.0 for Android+iOS
+# GPS ANE V3.3.2 for Android+iOS
 Although there is a GPS API coming with AIR SDK, in a real app development scenario, you need a better GPS solution. You need an exact and faster Gps solution which you can really trust. That's why we decided to build this cool GPS extension. it's highly optimized for automatic provider picker to ensure your app will get user location as fast as possible even if indoor. it's also optimized for battery usage so you don't have to worry about your app's battery usage at all. try the extension right now for free and see how fast it is. 
 
 **Main Features:**
@@ -10,14 +10,10 @@ Although there is a GPS API coming with AIR SDK, in a real app development scena
 # asdoc
 [find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gps/package-detail.html)
 
-# Demo .apk
-you may like to see the ANE in action? [Download demo .apk](https://github.com/myflashlab/GPS-ANE/tree/master/FD/dist)
-
-**NOTICE**: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.
-[Download the ANE](https://github.com/myflashlab/GPS-ANE/tree/master/FD/lib)
+[Download demo ANE](https://github.com/myflashlab/GPS-ANE/tree/master/AIR/lib)
 
 # AIR Usage - location
-For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GPS-ANE/blob/master/FD/src/MainFinal.as).
+For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GPS-ANE/blob/master/AIR/src/MainFinal.as).
 
 ```actionscript
      import com.myflashlab.air.extensions.gps.Gps;
@@ -187,28 +183,28 @@ FOR iOS:
 <!--
 Embedding the ANE:
 -->
-  <extensions>
+    <extensions>
   
-	<extensionID>com.myflashlab.air.extensions.gps</extensionID>
-	
-	<!-- Required if you are targeting AIR 24+ and have to take care of Permissions mannually -->
-	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
-	
-	<!-- download the dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
-    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
-    <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
-    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
-    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
-    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
+        <extensionID>com.myflashlab.air.extensions.gps</extensionID>
+
+        <!-- Required if you are targeting AIR 24+ and have to take care of Permissions mannually -->
+        <extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
+
+        <!-- download the dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
+        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
     
-  </extensions>
+    </extensions>
 -->
 ```
 
 # Requirements
 * Android API 15 or higher
 * iOS SDK 8.0 or higher
-* AIR SDK 25 or higher
+* AIR SDK 27 or higher
 * This ANE is dependent on **androidSupport.ane**, **googlePlayServices_base.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_location.ane** and **overrideAir.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 * on Android you have to compile on debug or captive (shared compilation will fail)
 
@@ -233,6 +229,9 @@ http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Dec 15, 2017 - V3.3.2*
+* Optimized for [ANE-LAB software](https://github.com/myflashlab/ANE-LAB).
+
 *May 19, 2017 - V3.3.0*
 * Added the following command: ```Gps.requestAlwaysAuthorization();```. Fix for [this issue](https://github.com/myflashlab/GPS-ANE/issues/23)
 * Updated the Android libraries which resulted in huge decrease in the ANE file size.

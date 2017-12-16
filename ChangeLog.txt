@@ -1,5 +1,8 @@
 GPS Adobe Air Native Extension
 
+*Dec 15, 2017 - V3.3.2*
+* Optimized for [ANE-LAB software](https://github.com/myflashlab/ANE-LAB).
+
 *May 19, 2017 - V3.3.0*
 * Added the following command: ```Gps.requestAlwaysAuthorization();```. Fix for [this issue](https://github.com/myflashlab/GPS-ANE/issues/23)
 * Updated the Android libraries which resulted in huge decrease in the ANE file size.
