@@ -52,8 +52,6 @@ package
 	 */
 	public class MainFinal extends Sprite 
 	{
-		private var _exPermissions:PermissionCheck = new PermissionCheck();
-		
 		private const BTN_WIDTH:Number = 150;
 		private const BTN_HEIGHT:Number = 60;
 		private const BTN_SPACE:Number = 2;
@@ -163,24 +161,24 @@ package
 			// first you need to make sure you have access to the Location API
 			var permissionState:int;
 			
-			if(_exPermissions.os == PermissionCheck.ANDROID)
+			if(PermissionCheck.os == PermissionCheck.ANDROID)
 			{
-				permissionState = _exPermissions.check(PermissionCheck.SOURCE_LOCATION);
+				permissionState = PermissionCheck.check(PermissionCheck.SOURCE_LOCATION);
 			}
-			else if(_exPermissions.os == PermissionCheck.IOS)
+			else if(PermissionCheck.os == PermissionCheck.IOS)
 			{
-				permissionState = _exPermissions.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE);
+				permissionState = PermissionCheck.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE);
 			}
 			
 			if (permissionState == PermissionCheck.PERMISSION_UNKNOWN || permissionState == PermissionCheck.PERMISSION_DENIED)
 			{
-				if(_exPermissions.os == PermissionCheck.ANDROID)
+				if(PermissionCheck.os == PermissionCheck.ANDROID)
 				{
-					_exPermissions.request(PermissionCheck.SOURCE_LOCATION, onRequestResult);
+					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION, onRequestResult);
 				}
-				else if(_exPermissions.os == PermissionCheck.IOS)
+				else if(PermissionCheck.os == PermissionCheck.IOS)
 				{
-					_exPermissions.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onRequestResult);
+					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onRequestResult);
 				}
 			}
 			else
@@ -189,9 +187,9 @@ package
 				init();
 			}
 			
-			function onRequestResult($state:int):void
+			function onRequestResult($obj:Object):void
 			{
-				if ($state != PermissionCheck.PERMISSION_GRANTED)
+				if ($obj.state != PermissionCheck.PERMISSION_GRANTED)
 				{
 					C.log("You did not allow the app the required permissions!");
 				}
@@ -218,17 +216,16 @@ package
 			
 			/*var btn0:MySprite = createBtn("request Always Access on iOS");
 			btn0.addEventListener(MouseEvent.CLICK, requestAlwaysAccess);
-			if(_exPermissions.os == PermissionCheck.IOS) _list.add(btn0);
+			if(PermissionCheck.os == PermissionCheck.IOS) _list.add(btn0);
 			
 			function requestAlwaysAccess(e:MouseEvent):void
 			{
-				_exPermissions.request(PermissionCheck.SOURCE_LOCATION_ALWAYS, onRequestResult);
+				PermissionCheck.request(PermissionCheck.SOURCE_LOCATION_ALWAYS, onRequestResult);
 			}
 			
-			function onRequestResult($state:int):void
+			function onRequestResult($obj:Object):void
 			{
-				C.log("PermissionCheck.SOURCE_LOCATION_ALWAYS = " + prettify($state));
-				trace("PermissionCheck.SOURCE_LOCATION_ALWAYS = " + prettify($state));
+				trace("PermissionCheck.SOURCE_LOCATION_ALWAYS = " + prettify($obj.state));
 			}*/
 			
 			// -------------------------
@@ -396,7 +393,36 @@ package
 		
 		
 		
-		
+		private function prettify($state:int):String
+		{
+			var str:String;
+			
+			switch($state)
+			{
+				case PermissionCheck.PERMISSION_UNKNOWN:
+					
+					str = "UNKNOWN";
+					
+					break;
+				case PermissionCheck.PERMISSION_DENIED:
+					
+					str = "DENIED";
+					
+					break;
+				case PermissionCheck.PERMISSION_GRANTED:
+					
+					str = "GRANTED";
+					
+					break;
+				case PermissionCheck.PERMISSION_OS_ERR:
+					
+					str = "Not available on this OS!";
+					
+					break;
+			}
+			
+			return str;
+		}
 		
 		private function createBtn($str:String):MySprite
 		{

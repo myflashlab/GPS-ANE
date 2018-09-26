@@ -1,5 +1,17 @@
 GPS Adobe Air Native Extension
 
+*Sep 19, 2018 - V3.3.3*
+* Removed androidSupport dependency ANE.
+* This ANE depends on the following ANEs now.
+	* [permissionCheck.ane](https://github.com/myflashlab/PermissionCheck-ANE/) *required on iOS/Android*
+	* overrideAir.ane *required on iOS/Android*
+	* androidSupport-core.ane *required on Android*
+	* androidSupport-v4.ane *required on Android*
+	* googlePlayServices_base.ane *required on Android*
+	* googlePlayServices_basement.ane *required on Android*
+	* googlePlayServices_location.ane *required on Android*
+* iOS 11+ requires a new key in the plist manifest: ```<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>```
+
 *Dec 15, 2017 - V3.3.2*
 * Optimized for [ANE-LAB software](https://github.com/myflashlab/ANE-LAB).
 

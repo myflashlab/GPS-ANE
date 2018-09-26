@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/27.0">
+<application xmlns="http://ns.adobe.com/air/application/30.0">
   <id>com.doitflash.exGps</id>
-  <versionNumber>3.3.2</versionNumber>
+  <versionNumber>3.3.3</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGps</filename>
   <name>GPS ANE</name>
   <android>
-    <manifestAdditions> <!--http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffc.html#WS2d929364fa0b81373f2c6cba12a3522f10c-8000-->
+    <manifestAdditions>
 		<![CDATA[<manifest android:installLocation="auto">
 		<uses-permission android:name="android.permission.WAKE_LOCK" />
 		<uses-permission android:name="android.permission.INTERNET" />
@@ -18,8 +18,7 @@
 		<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 		<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 						
-		<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
-		<uses-sdk android:targetSdkVersion="23"/>
+		<uses-sdk android:targetSdkVersion="26"/>
 		
 		<application android:hardwareAccelerated="true" android:allowBackup="true">
 			
@@ -63,14 +62,14 @@
 		<true />
 		
 		<!--required for GPS-->
-		<key>NSLocationUsageDescription</key>
-		<string>I need location 1</string>
-		
 		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>I need location 2</string>
+		<string>I need location reason</string>
 		
 		<key>NSLocationAlwaysUsageDescription</key>
-		<string>I need location 3</string>
+		<string>I need location reason</string>
+		
+		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+		<string>I need location reason</string>
 		
 		<key>UIDeviceFamily</key>
 		<array>
@@ -121,16 +120,17 @@
   <extensions>
 	
 	<extensionID>com.myflashlab.air.extensions.gps</extensionID>
-	
-	<!-- Required if you are targetting AIR 24+ and have to take care of Permissions mannually -->
+
+    <!-- Required for gps ANE to work -->
 	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 	
-	<!-- download the dependency ANEs from https://github.com/myflashlab/common-dependencies-ANE -->
-    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+	<!-- Dependency ANEs https://github.com/myflashlab/common-dependencies-ANE -->
+    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.location</extensionID>
-	
+
   </extensions>
 </application>
