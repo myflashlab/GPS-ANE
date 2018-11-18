@@ -1,5 +1,9 @@
 GPS Adobe Air Native Extension
 
+*Nov 18, 2018 - V3.3.4*
+* Works with OverrideAir ANE V5.6.1 or higher
+* Works with ANELAB V1.1.26 or higher
+
 *Sep 19, 2018 - V3.3.3*
 * Removed androidSupport dependency ANE.
 * This ANE depends on the following ANEs now.
