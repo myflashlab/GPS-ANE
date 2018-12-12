@@ -7,10 +7,7 @@ Although there is a GPS API coming with AIR SDK, in a real app development scena
 * geocoding reverse to convert gps coordinates to real addresses
 * geocoding reverse to convert gps coordinates to real addresses
 
-# asdoc
-[find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gps/package-detail.html)
-
-[Download demo ANE](https://github.com/myflashlab/GPS-ANE/tree/master/AIR/lib)
+[find the latest **asdoc** for this ANE here.](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gps/package-detail.html)
 
 # AIR Usage - location
 For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GPS-ANE/blob/master/AIR/src/MainFinal.as).
