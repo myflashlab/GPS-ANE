@@ -161,22 +161,22 @@ package
 			// first you need to make sure you have access to the Location API
 			var permissionState:int;
 			
-			if(PermissionCheck.os == PermissionCheck.ANDROID)
+			if(OverrideAir.os == OverrideAir.ANDROID)
 			{
 				permissionState = PermissionCheck.check(PermissionCheck.SOURCE_LOCATION);
 			}
-			else if(PermissionCheck.os == PermissionCheck.IOS)
+			else if(OverrideAir.os == OverrideAir.IOS)
 			{
 				permissionState = PermissionCheck.check(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE);
 			}
 			
 			if (permissionState == PermissionCheck.PERMISSION_UNKNOWN || permissionState == PermissionCheck.PERMISSION_DENIED)
 			{
-				if(PermissionCheck.os == PermissionCheck.ANDROID)
+				if(OverrideAir.os == OverrideAir.ANDROID)
 				{
 					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION, onRequestResult);
 				}
-				else if(PermissionCheck.os == PermissionCheck.IOS)
+				else if(OverrideAir.os == OverrideAir.IOS)
 				{
 					PermissionCheck.request(PermissionCheck.SOURCE_LOCATION_WHEN_IN_USE, onRequestResult);
 				}
@@ -201,32 +201,30 @@ package
 			}
 		}
 		
-		private function myDebuggerDelegate($ane:String, $class:String, $msg:String):void
-		{
-			trace($ane+"("+$class+") "+$msg);
-		}
-		
 		private function init():void
 		{
-			// remove this line in production build or pass null as the delegate
-			OverrideAir.enableDebugger(myDebuggerDelegate);
+			// Remove OverrideAir debugger in production builds
+			OverrideAir.enableDebugger(function ($ane:String, $class:String, $msg:String):void
+			{
+				trace($ane+" ("+$class+") "+$msg);
+			});
 			
 			Gps.init(); // call init only once in your project
-			// Gps.dispose();
 			
-			/*var btn0:MySprite = createBtn("request Always Access on iOS");
+			var btn0:MySprite = createBtn("request Always Access on iOS");
 			btn0.addEventListener(MouseEvent.CLICK, requestAlwaysAccess);
-			if(PermissionCheck.os == PermissionCheck.IOS) _list.add(btn0);
+			if(OverrideAir.os == OverrideAir.IOS) _list.add(btn0);
 			
 			function requestAlwaysAccess(e:MouseEvent):void
 			{
 				PermissionCheck.request(PermissionCheck.SOURCE_LOCATION_ALWAYS, onRequestResult);
 			}
 			
-			function onRequestResult($obj:Object):void
+			function onRequestResult($state:int):void
 			{
-				trace("PermissionCheck.SOURCE_LOCATION_ALWAYS = " + prettify($obj.state));
-			}*/
+				C.log("PermissionCheck.SOURCE_LOCATION_ALWAYS = " + prettify($state));
+				trace("PermissionCheck.SOURCE_LOCATION_ALWAYS = " + prettify($state));
+			}
 			
 			// -------------------------
 			
