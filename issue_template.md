@@ -1,1 +1,0 @@
-**NOTICE:** If you need MyFlashLabs developers' professional help, you should be either a [club member](https://www.myflashlabs.com/product/myflashlabs-club-membership/) or have a [premium support package](https://www.myflashlabs.com/product/myflashlabs-support/). Otherwise, ask your question here and the community might help you.
