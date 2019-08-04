@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/31.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
   <id>com.doitflash.exGps</id>
-  <versionNumber>3.3.4</versionNumber>
+  <versionNumber>3.3.41</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGps</filename>
   <name>GPS ANE</name>
@@ -18,7 +18,7 @@
 		<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
 		<uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
 
-		<uses-sdk android:targetSdkVersion="26"/>
+		<uses-sdk android:targetSdkVersion="28"/>
 		
 		<application android:hardwareAccelerated="true" android:allowBackup="true">
 			
@@ -47,7 +47,7 @@
   <iPhone>
     <InfoAdditions>
 		<![CDATA[<key>MinimumOSVersion</key>
-		<string>8.0</string>
+		<string>10.0</string>
 		
 		<key>UIStatusBarStyle</key>
 		<string>UIStatusBarStyleBlackOpaque</string>

@@ -103,7 +103,7 @@ FOR ANDROID:
 		
 		<uses-permission android:name="android.permission.WAKE_LOCK" />
 		<uses-permission android:name="android.permission.INTERNET" />
-		<uses-sdk android:targetSdkVersion="26"/>
+		<uses-sdk android:targetSdkVersion="28"/>
 		
 		<!-- required for GPS -->
 		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -144,7 +144,7 @@ FOR iOS:
 -->
 <InfoAdditions>
 		<key>MinimumOSVersion</key>
-		<string>8.0</string>
+		<string>10.0</string>
 		
 		<key>UIStatusBarStyle</key>
 		<string>UIStatusBarStyleBlackOpaque</string>
@@ -201,7 +201,7 @@ Embedding the ANE:
 
 # Requirements
 * Android API 15+
-* iOS SDK 8.0+
+* iOS SDK 10.0+
 * AIR SDK 30+
 
 # Permissions
