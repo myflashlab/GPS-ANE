@@ -1,9 +1,15 @@
 GPS Adobe Air Native Extension
 
-*Aug 4, 2019 - V3.3.41*
+*Feb 05, 2020 - V4.0.1*
+- Add some minor improvements
+
+*Dec 28, 2019 - V4.0.0*
+- Add androidx dependencies instead of android support
+
+*Aug 04, 2019 - V3.3.41*
 * Added Android 64-bit support
 * Supports iOS 10+
-* Removed **.os** property, use ```OverrideAir.os``` instead.
+* Removed **.os** property, use `OverrideAir.os` instead.
 
 *Nov 18, 2018 - V3.3.4*
 * Works with OverrideAir ANE V5.6.1 or higher
@@ -19,13 +25,13 @@ GPS Adobe Air Native Extension
 	* googlePlayServices_base.ane *required on Android*
 	* googlePlayServices_basement.ane *required on Android*
 	* googlePlayServices_location.ane *required on Android*
-* iOS 11+ requires a new key in the plist manifest: ```<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>```
+* iOS 11+ requires a new key in the plist manifest: `<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>`
 
 *Dec 15, 2017 - V3.3.2*
 * Optimized for [ANE-LAB software](https://github.com/myflashlab/ANE-LAB).
 
 *May 19, 2017 - V3.3.0*
-* Added the following command: ```Gps.requestAlwaysAuthorization();```. Fix for [this issue](https://github.com/myflashlab/GPS-ANE/issues/23)
+* Added the following command: `Gps.requestAlwaysAuthorization();`. Fix for [this issue](https://github.com/myflashlab/GPS-ANE/issues/23)
 * Updated the Android libraries which resulted in huge decrease in the ANE file size.
 * You will need AIR SDK 25 or higher to compile the ANE.
 
