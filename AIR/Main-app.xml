@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/32.0">
   <id>com.doitflash.exGps</id>
-  <versionNumber>3.3.41</versionNumber>
+  <versionNumber>4.0.1</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGps</filename>
   <name>GPS ANE</name>
@@ -107,8 +107,8 @@
 	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 	
 	<!-- Dependency ANEs https://github.com/myflashlab/common-dependencies-ANE -->
-    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
-    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.androidx.core</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.androidx.lifecycle</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
