@@ -1,10 +1,7 @@
 GPS Adobe Air Native Extension
 
-*Feb 05, 2020 - V4.0.1*
-- Add some minor improvements
-
-*Dec 28, 2019 - V4.0.0*
-- Add androidx dependencies instead of android support
+*Apr 05, 2020 - V4.0.1*
+- Added androidx dependencies instead of android support
 
 *Aug 04, 2019 - V3.3.41*
 * Added Android 64-bit support

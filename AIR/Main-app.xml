@@ -48,6 +48,9 @@
     <InfoAdditions>
 		<![CDATA[<key>MinimumOSVersion</key>
 		<string>10.0</string>
+
+		<key>UILaunchStoryboardName</key>
+		<string>LaunchScreen</string>
 		
 		<key>UIStatusBarStyle</key>
 		<string>UIStatusBarStyleBlackOpaque</string>

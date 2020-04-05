@@ -188,8 +188,8 @@ Embedding the ANE:
         <extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 	
 	    <!-- Dependency ANEs https://github.com/myflashlab/common-dependencies-ANE -->
-        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
-        <extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.core</extensionID>
+        <extensionID>com.myflashlab.air.extensions.dependency.androidx.lifecycle</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.base</extensionID>
         <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
@@ -200,9 +200,9 @@ Embedding the ANE:
 ```
 
 # Requirements
-* Android API 15+
+* Android API 19+
 * iOS SDK 10.0+
-* AIR SDK 30+
+* AIR SDK 33+
 
 # Permissions
 Below are the list of Permissions this ANE might require. Check out the demo project available at this repository to see how we have used the [PermissionCheck ANE](http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/) to ask for the permissions.
